@@ -1,16 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import HTMLReactParser from "html-react-parser";
 import { useParams } from "react-router-dom";
 import millify from "millify";
 import {
   useGetCryptoDetailsQuery,
-  useGetCryptoHistoryQuery,
 } from "../services/cryptoApi";
-import LineChart from "./LineChart";
 
 const CryptoDetails = () => {
   const { coinID } = useParams();
-  const [timePeriod, setTimePeriod] = useState("7d");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinID);
   
   
@@ -27,8 +24,6 @@ const CryptoDetails = () => {
   
   
   const cryptoDetails = data?.data?.coin;
-
-  const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
 
   const stats = [
     {
@@ -85,7 +80,7 @@ const CryptoDetails = () => {
           </h1>
         </div>
 
-        <select
+        {/* <select
           defaultValue="7d"
           className="select-timeprd border-b-2 border-black rounded-lg p-2 my-6 focus:outline-none"
           placeholder="Select Time Period"
@@ -96,7 +91,7 @@ const CryptoDetails = () => {
           {time.map((date) => (
             <option key={date}>{date}</option>
           ))}
-        </select>
+        </select> */}
 
         {/* {coinHistory && (
           <LineChart
