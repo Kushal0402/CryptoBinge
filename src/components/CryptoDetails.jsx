@@ -29,22 +29,22 @@ const CryptoDetails = () => {
   const stats = [
     {
       title: "Price to USD",
-      value: `$ ${cryptoDetails?.price && millify(cryptoDetails?.price)}`,
+      value: `${cryptoDetails?.price && millify(cryptoDetails?.price)}`,
     },
     { title: "Rank", value: cryptoDetails?.rank },
     {
       title: "24h Volume",
-      value: `$ ${cryptoDetails?.volume && millify(cryptoDetails?.volume)}`,
+      value: `${cryptoDetails?.volume && millify(cryptoDetails?.volume)}`,
     },
     {
       title: "Market Cap",
-      value: `$ ${
+      value: `${
         cryptoDetails?.marketCap && millify(cryptoDetails?.marketCap)
       }`,
     },
     {
       title: "All-time-high(daily avg.)",
-      value: `$ ${
+      value: `${
         cryptoDetails?.allTimeHigh?.price &&
         millify(cryptoDetails?.allTimeHigh?.price)
       }`,
@@ -57,13 +57,13 @@ const CryptoDetails = () => {
     { title: "Aprroved Supply", value: cryptoDetails?.supply?.confirmed },
     {
       title: "Total Supply",
-      value: `$ ${
+      value: `${
         cryptoDetails?.supply?.total && millify(cryptoDetails?.supply?.total)
       }`,
     },
     {
       title: "Circulating Supply",
-      value: `$ ${
+      value: `${
         cryptoDetails?.supply?.circulating &&
         millify(cryptoDetails?.supply?.circulating)
       }`,
