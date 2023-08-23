@@ -12,16 +12,20 @@ const CryptoDetails = () => {
   const { coinID } = useParams();
   const [timePeriod, setTimePeriod] = useState("7d");
   const { data, isFetching } = useGetCryptoDetailsQuery(coinID);
-  const { data: coinHistory, refetch } = useGetCryptoHistoryQuery({
-    coinID,
-    timePeriod,
-  });
-  console.log(coinHistory);
-  useEffect(() => {
-    refetch();
-    console.log(coinHistory);
-  }, [timePeriod, refetch, coinHistory]);
+  
+  
+  // const { data: coinHistory, refetch } = useGetCryptoHistoryQuery({
+  //   coinID,
+  //   timePeriod,
+  // });
+  // console.log(coinHistory);
+  // useEffect(() => {
+  //   refetch();
+  //   console.log(coinHistory);
+  // }, [timePeriod, refetch, coinHistory]);
 
+  
+  
   const cryptoDetails = data?.data?.coin;
 
   const time = ["3h", "24h", "7d", "30d", "1y", "3m", "3y", "5y"];
