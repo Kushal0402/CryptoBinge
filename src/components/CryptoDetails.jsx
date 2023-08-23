@@ -94,13 +94,13 @@ const CryptoDetails = () => {
           ))}
         </select>
 
-        {coinHistory && (
+        {/* {coinHistory && (
           <LineChart
             coinHistory={coinHistory}
             currentPrice={millify(cryptoDetails.price)}
             coinName={cryptoDetails.name}
           />
-        )}
+        )} */}
 
         <div className="grid grid-cols-12 gap-6">
           <div className="stats-container col-span-12 md:col-span-6 m-6 bg-blue-100 rounded-lg shadow-lg">
